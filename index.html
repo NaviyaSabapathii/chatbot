@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediChat - Healthcare Assistant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="chat-wrapper">
+    <header class="chat-header">
+      <div class="chat-logo">
+        <i class="fas fa-heartbeat"></i>
+        <h1>MediChat</h1>
+      </div>
+      <div id="status-indicator" class="status-indicator disconnected" title="Server connection status"></div>
+    </header>
+
+    <div class="chat-main">
+      <aside class="chat-sidebar">
+        <div class="auth">
+          <!-- Language Selection -->
+           <label for="language-select" style="margin-top: 10px; color: #f4f3f3; font-size: 14px;">Select Language:</label>
+           <select id="language-select">
+            <option value="english" selected>English</option>
+            <option value="tamil">Tamil</option>
+            <option value="hindi">Hindi</option>
+          </select>
+          <h2><i class="fas fa-user-circle"></i> Account</h2>
+          <p id="auth-status" class="auth-status">Not logged in</p>
+          <input type="email" id="email" placeholder="Enter your email" />
+          <input type="password" id="password" placeholder="Enter your password" />
+          <button id="signup-button"><i class="fas fa-user-plus"></i> Create Account</button>
+          <button id="login-button"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+          <button id="logout-button" style="display:none;"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+          <button id="clear-history-button" style="display:none;"><i class="fas fa-trash-alt"></i> Clear History</button>
+          <button id="download-pdf-button" style="display:none;"><i class="fas fa-download"></i> Download Chat</button>
+        </div>
+        
+        <div class="about">
+          <h3><i class="fas fa-info-circle"></i> About MediChat</h3>
+          <p>Your intelligent healthcare companion powered by advanced AI. Get instant responses to your health-related questions with confidence.</p>
+          <p class="disclaimer"><i class="fas fa-exclamation-triangle"></i> This tool provides general information only and is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+        </div>
+      </aside>
+
+      <section class="chat-section">
+        <div class="chat-body" id="chat">
+          <div class="message bot-message">
+            <div class="message-avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+              Hello! I'm your AI healthcare assistant. How can I help you today?
+              <span class="timestamp">Now</span>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input">
+          <textarea id="message-input" placeholder="Type your health question here..." rows="1"></textarea>
+          <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+          <button id="voice-button" title="Start voice typing"><i class="fas fa-microphone"></i></button>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
