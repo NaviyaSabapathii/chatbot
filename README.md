@@ -14,3 +14,6 @@ MediChat is not a substitute for professional medical advice. Always consult a l
 Here i have attached the picture of my medi chat,
 ![image](https://github.com/user-attachments/assets/efe4a321-7024-4459-9e15-6bf7f5e669f6)
 
+Developed By
+Naviya S.
+
