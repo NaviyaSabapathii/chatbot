@@ -10,4 +10,5 @@ FEATURES:
 
 NOTE:
 MediChat is not a substitute for professional medical advice. Always consult a licensed physician for serious health concerns.
-![image](https://github.com/user-attachments/assets/fadce287-a653-41e9-b35f-04c210b8682e)
+![image](https://github.com/user-attachments/assets/efe4a321-7024-4459-9e15-6bf7f5e669f6)
+
